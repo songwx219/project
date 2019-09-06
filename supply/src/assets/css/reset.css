@@ -1,0 +1,50 @@
+html{font-size: 12px;}
+input{outline: 0; vertical-align: middle;}
+ul,ol,li{list-style: none; padding: 0; margin: 0;}
+dl,dd,dt{margin: 0; font-weight: 400;}
+.form-control:focus,.btn:active,.btn:focus{ box-shadow:0 0 1px 1px rgba(0,104,183,.25); border-color: rgba(0,104,183,.4);}
+body{background: #fff; font-size: 14px;}
+.d-flex,p{margin-bottom: 0; padding: 0;}
+.container,.container-fluid{padding: 0;}
+@media (min-width: 1200px){.container {max-width: 1200px;}}
+.btn-primary {background-color: #0068b7; border-color: #0068b7;}
+a{color: #0068b7; text-decoration: none;}
+a:hover{text-decoration: none;}
+
+.header{height: 50px; width: 100%; background: #fff; position: fixed; left: 0; top: 0; z-index: 99; box-shadow: 0 0 3px 1px rgba(0, 0, 0, .5) }
+.header .logo{width: 200px;}
+.header .logo img{height: 50px;}
+.header .menu-btn{padding: 10px 10px 10px 0; display: block;}
+.header .menu-btn i{width: 30px; height: 30px; display: inline-block; background: url('../../../static/images/ad-icon.png') no-repeat 0px -90px;}
+.header .lings{padding: 10px; position: relative;}
+.header .lings i{display: inline-block; width: 30px; height: 30px; background: url('../../../static/images/ad-icon.png') no-repeat 0px -153px;;}
+.header .lings span{display: block; width: 7px; height: 7px; border-radius: 50%; position: absolute; right: 10px; top: 10px; background: #f00;}
+.header .user{ line-height: 30px; padding: 10px 20px;}
+.header .exit{display: inline-block; width: 30px; height: 30px; background: url('../../../static/images/ad-icon.png') no-repeat 0px -185px; vertical-align: middle;}
+
+
+.section{width: 100%; padding: 50px 20px 0 220px; background: #f5f5f5; transition: all.5s;}
+.section>.main{min-height: 480px; width: 100%; padding-top: 10px;}
+.section>.main .msgbox{width: 100%; padding: 20px; background: #fff;  border-radius: 5px; box-shadow: 0px 0px 5px rgba(0, 0, 0, .3)}
+.section>.main .msgbox>.search{padding-bottom: 20px;}
+.section>.main .msgbox>.search .form{width: 800px;}
+
+.msg-box .content{min-height: 500px; width: 100%; background: #fff; padding: 20px; position: relative; border-radius: 15px; box-shadow: 0px 0px 10px rgba(0, 0, 0, .3)}
+.msg-box>h3{padding: 15px 0; margin-bottom: 0; font-size: 20px; font-weight: 700; color: #666;}
+.msg-box.box1{width: 40%;}
+.msg-box.box2{width: 58%;}
+.msg-box.box1 .content p{width: 100%; line-height: 30px; height: 30px; padding-right: 70px; margin-bottom: 5px; border-bottom: 1px dotted #a8d9ff; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.msg-box.box1 .content p span{margin-right: -70px;}
+.msg-box #edit{width: 100%; height: 100%; display: block; position: relative;;}
+.msg-box #editSave{ position: absolute; bottom: 22px; right: 22px;}
+
+
+
+.footer{width: 100%; line-height: 40px; padding-top: 15px; text-align: center; color: #8c8c8c;}
+
+.allorder .el-checkbox-group .el-checkbox>span:last-child{display: none!important;}
+.el-image__error, .el-image__inner, .el-image__placeholder{width: auto; height: auto; max-width: 100%; max-height: 100%;}
+/* ==================== 左侧菜单收起样式 ==================== */
+.yjs-box.active{position: relative;}
+.yjs-box.active .header .menu-btn i{background-position: 0px -121px;}
+.yjs-box.active .section{padding-left: 80px;}
