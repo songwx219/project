@@ -1,0 +1,2 @@
+webpackJsonp([13],{LBTT:function(e,t){},SKi1:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r={render:function(){var e=this.$createElement,t=this._self._c||e;return t("transition",{attrs:{name:"el-zoom-in-center"}},[t("router-view")],1)},staticRenderFns:[]};var a=n("VU/8")({name:"Product",data:function(){return{}}},r,!1,function(e){n("LBTT")},"data-v-547ed0fa",null);t.default=a.exports}});
+//# sourceMappingURL=13.eb1f394c97b3bdcd04e1.js.map
