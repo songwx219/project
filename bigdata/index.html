@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>智能数据管理系统</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <header class="d-flex justify-content-between">
+        <div class="menu"></div>
+        <div class="title">智能数据管理系统</div>
+        <div class="timer">当前日期：<span></span></div>
+    </header>
+    <section class="main index clearfix">
+        <div class="section section1 float-left w-50">
+            <div class="box box1 float-left">
+                <h3>用户行业分布</h3>
+                <div class="content">
+                    <div class="content"><div id="userChart2"></div></div>
+                </div>
+            </div>
+            <div class="box box2 float-right">
+                <h3>各省金额情况</h3>
+                <div class="content">
+                    <table class="table">
+                        <thead><th>省份</th><th>金额/元</th><th>笔数</th></thead>
+                        <tbody>
+                            <tr><td>广东省</td><td>10,000,000</td><td>8,000</td></tr>
+                            <tr><td>广东省</td><td>10,000,000</td><td>8,000</td></tr>
+                            <tr><td>广东省</td><td>10,000,000</td><td>8,000</td></tr>
+                            <tr><td>广东省</td><td>10,000,000</td><td>8,000</td></tr>
+                            <tr><td>广东省</td><td>10,000,000</td><td>8,000</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="box box3 float-left">
+                <h3>各行业金额分布</h3>
+                <div class="content">
+                    <ul>
+                        <li class="clearfix">
+                            <div class="float-left icon">
+                                <svg width='50' height='50' id=''>
+                                    <circle cx="25" cy="25" r="21" fill='transparent' stroke='#ccc' stroke-width='4'></circle>
+                                    <path style="transition: all .5s" data-value='45' class="ring" fill="none" stroke="aqua" d="M 25 4 A 21 21 0 0 1 25 4" stroke-width="5" />
+                                    <text x="8" y="33" class="text" fill="#ff0">45%</text>
+                                </svg>
+                            </div>
+                            <div class="float-left info">
+                                <h5>教育</h5>
+                                <p>27,100,111</p>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="float-left icon">
+                                <svg width='50' height='50' id=''>
+                                    <circle cx="25" cy="25" r="21" fill='transparent' stroke='#ccc' stroke-width='4'></circle>
+                                    <path style="transition: all .5s" data-value='30' class="ring" fill="none" stroke="aqua" d="M 25 4 A 21 21 0 0 1 25 4" stroke-width="5" />
+                                    <text x="8" y="33" class="text" fill="#ff0">30%</text>
+                                </svg>
+                            </div>
+                            <div class="float-left info">
+                                <h5>教育</h5>
+                                <p>27,100,111</p>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="float-left icon">
+                                <svg width='50' height='50' id=''>
+                                    <circle cx="25" cy="25" r="21" fill='transparent' stroke='#ccc' stroke-width='4'></circle>
+                                    <path style="transition: all .5s" data-value='12' class="ring" fill="none" stroke="aqua" d="M 25 4 A 21 21 0 0 1 25 4" stroke-width="5" />
+                                    <text x="8" y="33" class="text" fill="#ff0">12%</text>
+                                </svg>
+                            </div>
+                            <div class="float-left info">
+                                <h5>教育</h5>
+                                <p>27,100,111</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="float-left icon">
+                                <svg width='50' height='50' id=''>
+                                    <circle cx="25" cy="25" r="21" fill='transparent' stroke='#ccc' stroke-width='4'></circle>
+                                    <path style="transition: all .5s" data-value='7' class="ring" fill="none" stroke="aqua" d="M 25 4 A 21 21 0 0 1 25 4" stroke-width="5" />
+                                    <text x="8" y="33" class="text" fill="#ff0">7%</text>
+                                </svg>
+                            </div>
+                            <div class="float-left info">
+                                <h5>教育</h5>
+                                <p>27,100,111</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="float-left icon">
+                                <svg width='50' height='50' id=''>
+                                    <circle cx="25" cy="25" r="21" fill='transparent' stroke='#ccc' stroke-width='4'></circle>
+                                    <path style="transition: all .5s" data-value='5' class="ring" fill="none" stroke="aqua" d="M 25 4 A 21 21 0 0 1 25 4" stroke-width="5" />
+                                    <text x="8" y="33" class="text" fill="#ff0">5%</text>
+                                </svg>
+                            </div>
+                            <div class="float-left info">
+                                <h5>教育</h5>
+                                <p>27,100,111</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="float-left icon">
+                                <svg width='50' height='50' id=''>
+                                    <circle cx="25" cy="25" r="21" fill='transparent' stroke='#ccc' stroke-width='4'></circle>
+                                    <path style="transition: all .5s" data-value='2' class="ring" fill="none" stroke="aqua" d="M 25 4 A 21 21 0 0 1 25 4" stroke-width="5" />
+                                    <text x="8" y="33" class="text" fill="#ff0">2%</text>
+                                </svg>
+                            </div>
+                            <div class="float-left info">
+                                <h5>教育</h5>
+                                <p>27,100,111</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box box4 float-right">
+                <h3>各产业金额分布</h3>
+                <div class="content"><div id="userChart"></div></div>
+            </div>
+        </div>
+        <div class="section section2 float-right w-50">
+            <div class="top">
+                <h2 class="title">累计金额：
+                    <strong class="digitalScroll">
+                        <span class="num">3897564855</span>
+                    </strong> 元 
+                    <strong class="digitalScroll"><span class="num">568878</span></strong> 笔</h2>
+                <p><span>预计目标金额：</span><strong>10,000,000,000</strong></p>
+            </div>
+            <div class="bottom clearfix">
+                <div class="float-left precent">
+                    <svg width='200' height='200' id=''>
+                        <circle cx="100" cy="100" r="90" fill='transparent' stroke='#ccc' stroke-width='10'></circle>
+                        <path style="transition: all .5s" class="ring" fill="none" stroke="aqua" d="M 100 10 A 90 90 0 0 1 100 190" stroke-width="10" />
+                        <text x="52" y="90" class="text" fill="#ff0">完成率</text>
+                        <text x="70" y="130" class="text number" fill="#ff0">0%</text>
+                    </svg>
+                </div>
+                <div class="float-right content">
+                    <div class="info">
+                        <p>某某i某有限公司 于 2019-02-02 12：00：00 支付金额 10，000，000元整</p>
+                        <p>某某i某有限公司 于 2019-02-02 12：00：00 支付金额 10，000，000元整</p>
+                        <p>某某i某有限公司 于 2019-02-02 12：00：00 支付金额 10，000，000元整</p>
+                        <p>某某i某有限公司 于 2019-02-02 12：00：00 支付金额 10，000，000元整</p>
+                        <p>某某i某有限公司 于 2019-02-02 12：00：00 支付金额 10，000，000元整</p>
+                        <p>某某i某有限公司 于 2019-02-02 12：00：00 支付金额 10，000，000元整</p>
+                        <p>某某i某有限公司 于 2019-02-02 12：00：00 支付金额 10，000，000元整</p>
+                        <p>某某i某有限公司 于 2019-02-02 12：00：00 支付金额 10，000，000元整</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="section section3 float-left w-50">
+            <h3>资产信息</h3>
+            <div class="content">
+                <div class="box box1 prev"></div>
+                <div class="box box2 on"></div>
+                <div class="box box3 next"></div>
+            </div>
+            <div class="icon">
+                <i></i><i class="on"></i><i></i>
+            </div>
+        </div>
+        <div class="section section4 float-right w-50">
+            <div class="float-left w-50">
+                <h3>大数据智能系统</h3>
+                <div class="box lunbo1">
+                    <h4>数据信息</h4>
+                    <div class="content">
+                        <div class="item prev">
+                            <p><span>预警时间：</span>2019-02-02 14:00:00</p>
+                            <p><span>所属城市：</span>广东省广州市</p>
+                            <p><span>用户名：</span>张三</p>
+                            <p><span>命中信息：</span>啊啊啊啊</p>
+                        </div>
+                        <div class="item on">
+                            <p><span>预警时间：</span>2019-02-02 14:00:00</p>
+                            <p><span>所属城市：</span>广东省广州市</p>
+                            <p><span>用户名：</span>张三</p>
+                            <p><span>命中信息：</span>啊啊啊啊</p>
+                        </div>
+                        <div class="item next">
+                            <p><span>预警时间：</span>2019-02-02 14:00:00</p>
+                            <p><span>所属城市：</span>广东省广州市</p>
+                            <p><span>用户名：</span>张三</p>
+                            <p><span>命中信息：</span>啊啊啊啊</p>
+                        </div>
+                        <div class="icon"><i></i><i class="on"></i><i></i></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>数据信息top4</h4>
+                    <div class="content">
+                        <table class="table">
+                            <thead><th>名称</th><th>占比</th><th>次数</th></thead>
+                            <tbody>
+                                <tr><td>实施海上</td><td>75%</td><td>123555</td></tr>
+                                <tr><td>实施海上</td><td>75%</td><td>123555</td></tr>
+                                <tr><td>实施海上</td><td>75%</td><td>123555</td></tr>
+                                <tr><td>实施海上</td><td>75%</td><td>123555</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="float-right w-50">
+                <h3>大数据智能系统</h3>
+                <div class="box">
+                    <h4>数据信息</h4>
+                    <div class="content lunbo2">
+                        <div class="item prev">
+                            <p><span>预警时间：</span>2019-02-02 14:00:00</p>
+                            <p><span>所属城市：</span>广东省广州市</p>
+                            <p><span>用户名：</span>张三</p>
+                            <p><span>命中信息：</span>啊啊啊啊</p>
+                        </div>
+                        <div class="item on">
+                            <p><span>预警时间：</span>2019-02-02 14:00:00</p>
+                            <p><span>所属城市：</span>广东省广州市</p>
+                            <p><span>用户名：</span>张三</p>
+                            <p><span>命中信息：</span>啊啊啊啊</p>
+                        </div>
+                        <div class="item next">
+                            <p><span>预警时间：</span>2019-02-02 14:00:00</p>
+                            <p><span>所属城市：</span>广东省广州市</p>
+                            <p><span>用户名：</span>张三</p>
+                            <p><span>命中信息：</span>啊啊啊啊</p>
+                        </div>
+                        <div class="icon"><i></i><i class="on"></i><i></i></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>数据信息</h4>
+                    <div class="content">
+                        <div class="datainfo"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/echarts.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

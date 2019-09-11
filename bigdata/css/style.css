@@ -1,0 +1,89 @@
+html{font-size: 12px;}
+input{outline: 0;}
+ul,ol,li{list-style: none; padding: 0; margin: 0;}
+dl,dd,dt{margin: 0; font-weight: 400;}
+.form-control:focus,.btn:active,.btn:focus{ box-shadow:0 0 1px 1px rgba(0,104,183,.25); border-color: rgba(0,104,183,.4);}
+body{font-size: 12px; color: #fff; position: relative; }
+.d-flex{margin-bottom: 0; padding: 0;}
+.container,.container-fluid{padding: 0;}
+@media (min-width: 1200px){.container {max-width: 100%;}}
+.btn-primary {background-color: #0068b7; border-color: #0068b7;}
+a{color: #0068b7; text-decoration: none;}
+a:hover{text-decoration: none;}
+p{margin: 0;}
+
+body>.container{width: 100%; min-height: 700px; background: url('../images/bg.jpg') #000 no-repeat center; background-size: cover;}
+/* ================================= 头部样式 =============================== */
+header{width: 100%; height: 80px; line-height: 60px;}
+header .menu{width: 35%;}
+header .title{font-size: 26px; font-weight: 700; text-align: center; color: #0ff; width: 30%}
+header .timer{margin-right: 20px; color: #ddd; width: 35%; text-align: right;}
+/* ================================= 导航条样式 ================================ */
+
+
+/* ================================== 中间区域样式 =================================== */
+section.main{width: 100%;  position: absolute; left: 0; top: 80px; bottom: 0;}
+section.main>.section{height: 50%;}
+section.index .table td,section.index .table th{padding: 0;color: #fff;}
+section.main>.section1{border: 1px solid #444; border-left: 0; border-top: 0;}
+section.main>.section2{border-bottom: 1px solid #444;}
+section.main>.section3{border-right: 1px solid #444; position: relative;}
+section.main>.section h3{font-size: 16px; font-weight: 700; line-height: 1.8em; color: #0ff; padding-left: 20px; position: relative;}
+section.main>.section h3::before{content: ''; display: block; width: 13px; height: 13px; border: 3px solid #0ff; transform: rotateZ(45deg); position: absolute; left: 0px; top: 7px;}
+.section1>.box{font-size: 12px; width: 50%; height: 50%; padding: 0 10px;}
+.section1>.box .content{padding-left: 20px;}
+.section1>.box .top{line-height: 30px;}
+.section1>.box .top strong{color: #0ff;}
+.section1>.box1 #userChart2{width: 100%; height: 160px;}
+.section1>.box4 #userChart{width: 100%; height: 160px;}
+.section1>.box2{line-height: 23px;}
+
+.section1>.box3 li{float: left; width: 50%;} 
+.section1>.box3 .icon{width: 60px;}
+.section1>.box3 h5{font-size: 13px; font-weight: 700; height: 20px; line-height: 20px; margin-bottom: 3px;}
+.section1>.box3 path{transition: all 0.5s;}
+.section1>.box3 .text{font-size: 18px; font-weight: 700;}
+
+.section2 .title{ width: 80%; line-height: 50px; font-size: 22px; color: #f80; text-align: center; border-radius: 25px; margin: 10px auto; background: rgba(255,255,255,.2)}
+.section2 .top p{line-height: 40px; color: #f80; font-size: 18px; text-align: center;;}
+.section2 .precent{padding: 50px 0 0 10%; width: 40%;}
+.section2 .bottom .text{font-size: 30px; text-align: center; font-weight: 700;}
+.section2 .content{width: 60%; padding: 50px; font-size: 14px; line-height: 25px; color: #777;}
+.section2 .content p{height: 25px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+
+.section3{padding: 0 10px;}
+.section3 .content{ height: 100%; margin-top: -30px; position: relative; width: 100%; overflow: hidden;}
+.section3 .content .box{display: none; height: 80%; width: 70%; position: absolute; top: 30px; left: 15%; transition: all .5s;  background: rgba(255,255,255,.2); -webkit-perspective: 500;perspective: 500;}
+.section3 .content .box.prev{display: block; left: -50%; top: 18%; transform:scale(0.8) rotateY(15deg) skewY(-15deg)}
+.section3 .content .box.next{display: block; left: 80%; top: 18%; transform:scale(0.8) rotateY(15deg) skewY(15deg);}
+.section3 .content .box.on{display: block; z-index: 9;}
+.section3 .icon{position: absolute; bottom: 2%; left: 50%; margin-left: -45px;}
+.section3 .icon i{display: inline-block; width: 30px; height: 8px; margin: 2px; transition: all .5s; cursor: pointer; background: rgba(255,255,255,.2);;}
+.section3 .icon i.on{background:rgba(0,255,255,0.5);}
+.section4 .w-50{padding: 0 10px;}
+.section4 .box{height: 45%; width: 100%; padding: 10px; margin-bottom: 10px; background: rgba(255,255,255,.2); }
+.section4 .content{width: 100%; position: relative; height: 120px;}
+.section4 .item{width: 70%; position: absolute; left: 15%; color: #999; cursor: pointer; line-height: 22px; padding: 10px; transition: all .5s; border-radius: 5px; background: rgba(0,0,0,.2);}
+.section4 .item.prev{left: -12%; transform: scale(0.7)}
+.section4 .item.next{left: 42%; transform: scale(0.7)}
+.section4 .item.on{ background: rgba(0,0,0,.6); color: #0ff; z-index: 9;}
+.section4 .icon{position: absolute; bottom: -5px; left: 50%; margin-left: -45px;}
+.section4 .icon i{display: inline-block; width: 20px; height: 5px; margin: 2px; transition: all .5s; cursor: pointer; background: rgba(255,255,255,.2);;}
+.section4 .icon i.on{background:rgba(0,255,255,0.5);}
+.datainfo{width: 100%; height: 100%;}
+
+.modal-dialog{box-shadow: 0 0 5px 1px rgba(0, 0, 0, .5)}
+.alear-y{position: fixed; left: 50%; top: 2px; width: 600px; margin-left: -300px; z-index: 99999;}
+.alear-y .alert{margin-bottom: 5px; display: none; animation: alertShake .3s .5s 3 linear;transform: translateX(8px);}
+@keyframes alertShake{
+    0%{transform: translateX(8px)}
+    50%{transform: translateX(-8px)}
+    100%{transform: translateX(8px)}
+}
+
+
+.digitalScroll{position: relative;}
+.digitalScroll>.num{visibility: hidden;}
+.digitalScroll .box{position: absolute; left: 0; top: 0; width: 100%; height: 100%; line-height: 1.4em; overflow: hidden;}
+.digitalScroll .box li{float: left; height: 100%; transition: all 1.5s; position: relative; top: 0;}
+.digitalScroll .box li span{display: block;}
