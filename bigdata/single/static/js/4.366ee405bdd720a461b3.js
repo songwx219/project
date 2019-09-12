@@ -1,0 +1,2 @@
+webpackJsonp([4],{aQtz:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});n("7+uW"),n("7t+N");var r={name:"Store",components:{Header:n("2Hch").a},data:function(){return{}}},a={render:function(){var e=this.$createElement,t=this._self._c||e;return t("div",{staticClass:"container"},[t("Header"),this._v(" "),t("router-view")],1)},staticRenderFns:[]},s=n("VU/8")(r,a,!1,null,null,null);t.default=s.exports}});
+//# sourceMappingURL=4.366ee405bdd720a461b3.js.map
