@@ -1,5 +1,12 @@
 <template>
   <div class="aside nav-box">
+        <div class="userInfo">
+            <div class="icon"><img /></div>
+            <div class="info">
+                <h6>{{ $store.state.user.userData.uname }}</h6>
+                <p>上次登录：2019-08-08 12:00:00</p>
+            </div>
+        </div>
         <ul class="nav-list" v-for="item in menuData" :key='item.class'>
             <li class="tit"><span>{{item.class}}</span></li>
             <li 
@@ -99,4 +106,11 @@ export default {
 .nav-box .nav-list li ul li:hover a,.nav-box .nav-list li ul li.active a{color: #eee; font-weight: 700;}
 .nav-box .nav-list> li span{display: inline-block; vertical-align: middle;}
 .nav-box a .icon{display: inline-block; color: #ccc; width: 30px; height: 30px;line-height: 30px; font-size: 22px; vertical-align: middle;}
+.nav-box .userInfo {text-align: center;padding-bottom: 10px; color: #fff; border-bottom: 2px solid #016ab1;}
+.nav-box .userInfo .icon{width: 45px; height: 45px; margin: 10px auto; border-radius: 50%; overflow: hidden; border: 2px solid #99ccff;}
+.nav-box .userInfo .icon img{width: 50px; height: 50px;}
+.nav-box .userInfo h5{font-size: 18px; font-weight: 700;}
+.nav-box .userInfo h6{font-size: 15px; font-weight: 700;}
+.nav-box .userInfo p{font-size: 12px; transform: scale(0.9);}
+.nav-box .userInfo .btn{font-size: 12px; color: #fff;}
 </style>

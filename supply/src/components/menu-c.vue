@@ -1,5 +1,8 @@
 <template>
     <div class="aside nav-box">
+        <div class="userInfo">
+            <div class="icon"><img /></div>
+        </div>
         <div class="box">
             <ul class="nav-list" v-for="item in menuData" :key='item.class'>
                 <li class="tit"><span>{{item.class.replace('管理','')}}</span></li>
@@ -101,5 +104,8 @@
   .nav-box .nav-list> li.active ul{display: block;}
   .nav-box .nav-list li ul li:hover a,.nav-box .nav-list li ul li.active a{color: #fff;}
   .nav-box a .icon{display: inline-block; color: #ccc; width: 30px; height: 30px;line-height: 30px; font-size: 26px;}
+  .nav-box .userInfo {text-align: center;padding-bottom: 10px; color: #fff; border-bottom: 2px solid #016ab1;}
+  .nav-box .userInfo .icon{width: 45px; height: 45px; margin: 10px auto; border-radius: 50%; overflow: hidden; border: 2px solid #99ccff;}
+  .nav-box .userInfo .icon img{width: 50px; height: 50px;}
   </style>
   

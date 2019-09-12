@@ -9,7 +9,6 @@
         <div class="float-right">
             <div class="lings float-left"><router-link to='/user/message'><i></i><span v-if="msgnew"></span></router-link></div>
             <div class="user float-left">
-                <span>Hi, {{ $store.state.user.userData.uname }}</span>
                 <a href="javascript:;" @click='exit'><i class="exit"></i></a>
             </div>
         </div>
