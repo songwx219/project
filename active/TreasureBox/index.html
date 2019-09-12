@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>伊诺凯-丝绸之路</title>
+  <link href="css/index.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+</head>
+
+<body>
+  <!-- 网站头部 -->
+  <div class="header">
+    <div class="flyMan"><img src="images/header01.png" alt=""></div>
+    <div class="title">
+      <img src="images/header02.png" alt="伊诺凯带您重走丝绸之路，丝绸之旅，伊路风光">
+    </div> 
+    <div class="time"><img src="images/header03.png" alt="2018年11月1日-2018年12月31日"></div>
+  </div>  
+
+  <!-- 中间主要内容部分 -->
+  <div class="section index">
+    <div class="rule"></div>
+    <div class="dialog" id="ActiveRule">
+      <div class="main">
+        <div class="close"></div>
+        <div class="cont">
+          <h5>活动规则</h5>
+          <p>1. 在伊诺凯官网下订单金额满1元=1步</p>
+          <p>2. 丝绸之路是从西安站出发，终点站是罗马，途经多个驿站，每个驿站都放置了一个宝箱，打开宝箱之后，可以获得指定数量的金币</p>
+          <p>3. 获得金币累积达到一定数量后，即可兑换相应精美的礼品</p>
+          <h5>特殊提示</h5>
+          <p>1. 此活动只针对在伊诺凯网站下单的最终用户，经销商不参加此活动</p>
+          <p>2. 特价产品不参加此活动</p>
+          <p>3. 礼品图片仅供参考，具体以实物图片为准，礼品将在活动结束后7个工作日之内统一安排发放</p>
+          <p>4. 金币一旦兑换礼品之后，订单将不能取消或者办理退货，如果发生取消订单或者退货，兑换的礼品作废，同时扣除相应的金币</p>
+          <p>5. 此次活动的最终解释权归伊诺凯所有</p>
+        </div>
+      </div>
+    </div>
+    <div class="map">
+      <!-- 地图路线图片 -->
+      <div class="stepNum">
+        <img src="" alt="">
+      </div>
+      <!-- 地图11个宝箱显示 -->
+      <div class="treasureBox">
+        <div boxId="1" class="area area1">
+          <div class="box"></div><div class="tips">打开宝箱即可获得1个金币</div>
+        </div>
+        <div boxId="2" class="area area2">
+          <div class="box"></div><div class="tips">打开宝箱即可获得2个金币</div>
+        </div>
+        <div boxId="3" class="area area3">
+          <div class="box"></div><div class="tips">打开宝箱即可获得3个金币</div>
+        </div>
+        <div boxId="4" class="area area4">
+          <div class="box"></div><div class="tips">打开宝箱即可获得4个金币</div>
+        </div>
+        <div boxId="5" class="area area5">
+          <div class="box"></div><div class="tips">打开宝箱即可获得6个金币</div>
+        </div>
+        <div boxId="6" class="area area6">
+          <div class="box"></div><div class="tips">打开宝箱即可获得8个金币</div>
+        </div>
+        <div boxId="7" class="area area7">
+          <div class="box"></div><div class="tips">打开宝箱即可获得12个金币</div>
+        </div>
+        <div boxId="8" class="area area8">
+          <div class="box"></div><div class="tips">打开宝箱即可获得14个金币</div>
+        </div>
+        <div boxId="9" class="area area9">
+          <div class="box"></div><div class="tips">打开宝箱即可获得20个金币</div>
+        </div>
+        <div boxId="10" class="area area10">
+          <div class="box"></div><div class="tips">打开宝箱即可获得30个金币</div>
+        </div>
+        <div boxId="11" class="area area11">
+          <div class="box"></div><div class="tips">打开宝箱即可获得40个金币</div>
+        </div>
+      </div>
+      <!-- 地图右上角退出按钮 -->
+      <div class="close"><a href="#"><img src="images/close.png" alt=""></a></div>
+      <!-- 我的行程 -->
+      <div class="myTrip">
+        <p>
+          已走步数：<span class="step">0</span>步 
+          <span class="circleNum" title=""></span>
+        </p>
+        <p>已过驿站：<span class="post">0</span>个</p>
+        <p>已开宝箱：<span class="treasure">0</span>个</p>
+        <p class="coin">可用金币：<span class="goldCoin">0</span>个</p>
+        <p>已领奖品：<span class="award">0</span>个<i><a href="#">查看礼品</a></i></p>
+      </div>
+    </div>
+    <!-- 点击宝箱后领取奖品弹窗 -->
+    <div class="dialog" id="ReceiveGoldcoin">
+      <div class="main">
+        <div class="light"></div>
+        <div class="close"></div>
+        <div class="title"><img src="images/dia_title.png" alt=""></div>
+        <div class="box"><img src="images/dia_box.png" alt=""></div>
+        <div class="btn"><img src="images/dia_btn.png" alt=""></div>
+      </div>
+    </div>
+    <!-- 全部奖品领取完毕后，提示是否进入下一圈的弹窗 -->
+    <div class="dialog" id="goNextTrip">
+      <div class="main">
+        <div class="close"></div>
+        <div class="title"><img src="images/circle1.png" alt=""></div>
+        <div class="box"><img src="images/circle_map.png" alt=""></div>
+        <div class="btn"><img src="images/circle_btn.png" alt=""></div>
+      </div>
+    </div>
+    <div class="prizesExchange">
+      <div class="bg"></div>
+      <div class="prize prize1">
+        <div class="pic">
+          <img src="images/prize_1.png" alt="">
+          <img class="on" src="images/prizecur_1.png" alt="">
+        </div>
+        <div class="tips"><img src="images/jia-1.png" alt=""></div>
+        <p class="exchange"><span style="display: none;">1</span></p>
+      </div>
+      <div class="prize prize2">
+        <div class="pic">
+          <img src="images/prize_2.png" alt="">
+          <img class="on" src="images/prizecur_2.png" alt="">
+        </div>
+        <div class="tips"><img src="images/jia-2.png" alt=""></div>
+        <p class="exchange"><span style="display: none;">3</span></p>
+      </div>
+      <div class="prize prize3">
+        <div class="pic">
+          <img src="images/prize_3.png" alt="">
+          <img class="on" src="images/prizecur_3.png" alt="">
+        </div>
+        <div class="tips"><img src="images/jia-3.png" alt=""></div>
+        <p class="exchange"><span style="display: none;">5</span></p>
+      </div>
+      <div class="prize prize4">
+        <div class="pic">
+          <img src="images/prize_4.png" alt="">
+          <img class="on" src="images/prizecur_4.png" alt="">
+        </div>
+        <div class="tips"><img src="images/jia-4.png" alt=""></div>
+        <p class="exchange"><span style="display: none;">10</span></p>
+      </div>
+      <div class="prize prize5">
+        <div class="pic">
+          <img src="images/prize_5.png" alt="">
+          <img class="on" src="images/prizecur_5.png" alt="">
+        </div>
+        <div class="tips"><img src="images/jia-5.png" alt=""></div>
+        <p class="exchange"><span style="display: none;">20</span></p>
+      </div>
+      <div class="prize prize6">
+        <div class="pic">
+          <img src="images/prize_6.png" alt="">
+          <img class="on" src="images/prizecur_6.png" alt="">
+        </div>
+        <div class="tips"><img src="images/jia-6.png" alt=""></div>
+        <p class="exchange"><span style="display: none;">30</span></p>
+      </div>
+      <div class="prize prize7">
+        <div class="pic">
+          <img src="images/prize_7.png" alt="">
+          <img class="on" src="images/prizecur_7.png" alt="">
+        </div>
+        <div class="tips"><img src="images/jia-7.png" alt=""></div>
+        <p class="exchange"><span style="display: none;">50</span></p>
+      </div>
+      <div class="prize prize8">
+        <div class="pic">
+          <img src="images/prize_8.png" alt="">
+          <img class="on" src="images/prizecur_8.png" alt="">
+        </div>
+        <div class="tips"><img src="images/jia-8.png" alt=""></div>
+        <p class="exchange"><span style="display: none;">80</span></p>
+      </div>
+      <div class="prize prize9">
+        <div class="pic">
+          <img src="images/prize_9.png" alt="">
+          <img class="on" src="images/prizecur_9.png" alt="">
+        </div>
+        <div class="tips"><img src="images/jia-9.png" alt=""></div>
+        <p class="exchange"><span style="display: none;">100</span></p>
+      </div>
+      <div class="prize prize10">
+        <div class="pic">
+          <img src="images/prize_10.png" alt="">
+          <img class="on" src="images/prizecur_10.png" alt="">
+        </div>
+        <div class="tips"><img src="images/jia-10.png" alt=""></div>
+        <p class="exchange"><span style="display: none;">120</span></p>
+      </div>
+      <div class="prize prize11">
+        <div class="pic">
+          <img src="images/prize_11.png" alt="">
+          <img class="on" src="images/prizecur_11.png" alt="">
+        </div>
+        <div class="tips"><img src="images/jia-11.png" alt=""></div>
+        <p class="exchange"><span style="display: none;">140</span></p>
+      </div>
+    </div>
+    <!-- 点击宝箱后领取奖品弹窗 -->
+    <div class="dialog" id="ReceivePrize">
+      <div class="main">
+        <div class="light"></div>
+        <div class="close"></div>
+        <div class="title"><img src="images/dia_title.png" alt=""></div>
+        <div class="cont">
+          <h5>请填写奖品收货信息：</h5>
+          <table>
+            <tbody>
+              <tr><th>姓名：</th><td><input class="name" type="text" placeholder="请输入您的姓名"></td></tr>
+              <tr><th>联系方式：</th><td><input class="phone" type="text" placeholder="请输入您有效的联系方式"></td></tr>
+              <tr><th>收货地址：</th><td><textarea class="add" placeholder="请输入您具体的奖品收货地址" ></textarea></td></tr>
+            </tbody>
+          </table>
+          <p>*请认真核对以上信息，务必保证真实有效，以便奖品邮寄顺利！</p>
+        </div>
+        <div class="btn"><img src="images/dia_btn_1.png" alt=""></div>
+      </div>
+    </div>
+    <!-- 网站底部活动规则信息 -->
+    <div class="footer clr_c f12">
+      <dl class="clear">
+        <dt class="left">
+          <h5>活动规则</h5>
+          <p>1. 在伊诺凯官网下订单金额满1元=1步</p>
+          <p>2. 丝绸之路是从西安站出发，终点站是罗马，途经多个驿站，每个驿站都放置了一个宝箱，打开宝箱之后，可以获得指定数量的金币</p>
+          <p>3. 获得金币累积达到一定数量后，即可兑换相应精美的礼品。</p>
+          <p><img src="images/logo.png" alt=""></p>
+        </dt>
+        <dd class="right">
+          <h5>特殊提示</h5>
+          <p>1. 此活动只针对在伊诺凯网站下单的最终用户，经销商不参加此活动</p>
+          <p>2. 特价产品不参加此活动</p>
+          <p>3. 礼品图片仅供参考，具体以实物图片为准，礼品将在活动结束后7个工作日之内统一安排发放</p>
+          <p>4. 金币一旦兑换礼品之后，订单将不能取消或者办理退货，如果发生取消订单或者退货，兑换的礼品作废，同时扣除相应的金币</p>
+          <p>5. 此次活动的最终解释权归伊诺凯所有</p>
+        </dd>
+      </dl>
+    </div>
+  </div>
+  <!-- 奖品领取成功顶部弹窗提示 -->
+  <div class="messageTips">
+    恭喜您，奖品领取成功！
+  </div>
+</body>
+</html> 

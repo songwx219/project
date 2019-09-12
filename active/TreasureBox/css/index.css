@@ -1,0 +1,575 @@
+/*初始化标签样式*/
+*{padding:0; margin:0; box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;}
+ul,li{list-style:none;}
+input{outline: none;}
+img,i{vertical-align:middle; border:0;}
+a{text-decoration:none; color:#000;}
+input{outline: none; font-family:"Microsoft YaHei";vertical-align:middle;}
+body{font-family:"Microsoft YaHei"; font-size:14px;background: #fabb58; min-width: 1200px;}
+
+.clear{zoom:1;}
+.clear:after{content:""; display:block; width:auto; height:0; clear:both;}
+
+.left{float:left;}
+.right{float:right;}
+
+/*活动页面头部样式*/
+.header{width: 100%;
+  background: url(../images/header.jpg) no-repeat top center;
+  background-size:cover;
+  position: relative;
+}
+.header img{width: 100%;}
+.header .flyMan{
+  position: absolute;
+  width: 20%;
+  animation:flyMan 2s;
+
+}
+.header .title{width: 70%; margin: 0 10% 0 20%; opacity: 0; padding: 2% 0 0; animation:headTitle 2s 1s forwards;}
+.header .time{width: 30%; margin: 0px auto 0px; opacity: 0; animation:headTime 2s 2s forwards;}
+
+/*活动页面地图部分样式*/
+.section{
+  width: 100%;
+  padding: 20px 0;
+  position: relative;
+  background: url(../images/bg.jpg) no-repeat top center;
+  background-size:100% auto;
+}
+.section .rule{
+  position: absolute;
+  left: 5%;
+  top: -25px;
+  width: 13%;
+  height: 50px;
+  margin: 0 10px;
+  cursor: pointer;
+  color: #6d1c1d;
+  font-weight: 700;
+  transform: scale(1);
+  transition: all 0.5s;
+  background: url(../images/rule.png) no-repeat top center;
+  background-size:100% auto;
+} 
+
+.section .rule:hover{
+  transform: scale(1.1);
+}
+.map{
+  width: 90%;
+  margin: 0 auto;
+  background: url(../images/map.png) no-repeat center;
+  background-size:cover;
+  position: relative;
+}
+.map .stepNum{
+  width: 97.5%;
+  display: block;
+  padding-top: 0.2%;
+  margin: 0 2.2% 0 auto;
+}
+.map .stepNum img{
+  width: 100%;
+}
+.map .area{
+  position: absolute;
+  z-index: 99;
+  width: 5%;
+  height: 7%;
+}
+.map .area .box{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  background: url(../images/box1.png) no-repeat center;
+  background-size:cover;
+}
+.map .area .tips{
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: -30px;
+  top: -46px;
+  width: 120px;
+  height: 0px;
+  padding: 5px;
+  line-height: 17px;
+  text-align: center;
+  background: #32b042;
+  border-radius: 7px;
+  color: #fff;
+  z-index: 199;
+  perspective: 500;
+  transition: all 0.5s;
+  animation:boxTips 3s infinite;
+}
+.map .area .tips::before{
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  background: #32b042;
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+}
+.map .area:hover .tips{
+  opacity: 1;
+  visibility: visible;
+  height: 44px;
+  box-shadow: 2px 2px 10px 4px rgba(0,0,0,0.6),inset 2px 2px 2px rgba(0,0,0,0.3);
+}
+
+.map .passed::before{
+  content: '';
+  display: block;
+  animation:lightTwinkle 3s infinite;
+  width: 100%;
+  height: 100%;
+  transform:scale(1);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 90;
+  background: url(../images/light.png) no-repeat center;
+  background-size:200%;
+}
+.map .passed .box{
+  cursor: pointer;
+  background: url(../images/box.png) no-repeat center;
+  background-size:cover;
+  animation:boxShake 2s infinite;
+}
+.map .open:hover .tips{
+  opacity: 0;
+  height: 25px;
+  box-shadow: 0px 0px 0px;
+}
+
+.map .open .box{
+  background: url(../images/box2.png) no-repeat center;
+  background-size:cover;
+}
+.map .area1{right: 10%; top: 28%;}
+.map .area2{right: 17%; top: 18%;}
+.map .area3{left: 57%; top: 13%;}
+.map .area4{left: 62%; top: 30%;}
+.map .area5{left: 57%; top: 50%;}
+.map .area6{left: 50%; top: 42%;}
+.map .area7{left: 34%; top: 23%;}
+.map .area8{left: 35%; top: 55%;}
+.map .area9{left: 18%; top: 81%;}
+.map .area10{left: 10.5%; top: 51%;}
+.map .area11{left: 17%; top: 15%;}
+.map .area11 .box{width: 150%; height: 150%;}
+.map .area11::before{
+  content: '';
+  display: block;
+  animation:lightTwinkle 3s infinite;
+  width: 150%;
+  height: 150%;
+  transform:scale(1);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 90;
+  background: url(../images/light.png) no-repeat center;
+  background-size:200%;
+}
+.map .close{
+  position: absolute;
+  top: -21px;
+  right: -1%;
+  width: 5%;
+}
+.map .close img{width: 100%;}
+.myTrip{
+  position: absolute;
+  bottom: 3%;
+  right: 3%;
+  width: 30%;
+  height: 33%;
+  background: url(../images/mytrip.png) no-repeat center;
+  background-size:100% 100%;
+  padding: 5.2% 1% 0 3%;
+  font-size: 1.3em;
+  font-weight: 700;
+  color: #b06e1e;
+}
+.myTrip i a{
+  color: #1e74b0;
+  font-size: 0.9em;
+  margin-left: 20px;
+  font-weight: 400;
+  font-style: normal;
+}
+.myTrip p{position: relative; vertical-align: middle; width: 120%;}
+.myTrip p .step{color: #e5490c; font-size: 1.1em;}
+.myTrip p .goldCoin{
+  color: #f00;
+  font-size: 1.4em;
+  margin: 0 7px;
+  vertical-align:
+  bottom;display: inline-block;
+  transition: all 0.5s;
+}
+.myTrip .circleNum{
+  font-size: 0.2em;
+  margin-left: 5px;
+  margin-top: -8px;
+}
+.myTrip .circleNum i{
+ display: inline-block;
+ width: 25px;
+ height: 25px;
+ background: #f00;
+ margin-right:8px;
+ background: url(../images/1.png) no-repeat center;
+ background-size:100% 100%;
+}
+.myTrip .circleNum i:nth-child(2){
+  background-image: url(../images/2.png);
+}
+.myTrip .circleNum i:nth-child(3){
+  background-image: url(../images/3.png);
+}
+.myTrip .circleNum i:nth-child(4){
+  background-image: url(../images/4.png);
+}
+.myTrip .circleNum i:nth-child(5){
+  background-image: url(../images/5.png);
+}
+.myTrip .circleNum i:nth-child(6){
+  background-image: url(../images/6.png);
+}
+.dialog{
+  display: none;
+  width: 100%; height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 999;}
+.dialog .main{
+  width: 700px;
+  height: 600px;
+  position: absolute;
+  left: 50%; top: 50%;
+  margin: -300px 0 0 -350px;
+}
+.dialog .main img{width: 100%;}
+.dialog .main .light{
+  transform: scale(1.5);
+  position: absolute;left: 0; top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/dia_bg.png) no-repeat center;
+  background-size: 100% 100%;
+  transition: all 1s 0s;
+}
+.dialog .main .title{
+  width: 500px;
+  position: absolute;
+  left: 50%; top: 0;
+  margin: 0 0 0 -250px;
+  opacity: 0;
+  transition: all 0.7s 1s;
+}
+.dialog .main .box{
+  width: 400px;
+  margin: 0 auto;
+  padding-top: 150px;
+  position: relative;
+  transform:translate(0px,-1000px);
+  transition: all 0.7s 0.5s;
+}
+.dialog .main .btn{
+  width: 150px;
+  cursor: pointer;
+  margin: 0px auto;
+  position: relative;
+}
+.dialog .main .btn:hover{
+  animation:boxShake 2s infinite;
+}
+.dialog .main .close{
+  position: absolute;
+  top: 30px;
+  right: 30px; 
+  width: 50px;
+  height: 50px;
+  text-align: center; 
+  cursor: pointer;
+  background:  url(../images/dia_close.png) no-repeat center; background-size: 100% 100%;
+}
+.dialog .main.on .light{
+  transform: scale(1);
+  animation:digLightTwinkle 3s 1s infinite;
+}
+.dialog .main.on .title{
+  opacity: 1;
+  animation:headTime 3s 1s;
+}
+.dialog .main.on .box{
+  transform:translate(0px,0px);
+  animation:boxShake 2s 1s infinite;
+}
+
+#goNextTrip{
+  background: rgba(0,0,0,0.8);
+  transition: all 0.5s;
+}
+#goNextTrip .main .close{
+  top: 10px;
+  right: 10px; 
+}
+#goNextTrip .main .box{
+  width: 600px;
+  transform: translate(0px,0px);
+  opacity: 1;
+  margin-bottom: 20px;
+}
+#goNextTrip .main .title{
+  width: 500px;
+  position: absolute;
+  left: 50%; top: 0;
+  margin: 0 0 0 -250px;
+  opacity: 1;
+  animation:digLightTwinkle 5s infinite;
+}
+#goNextTrip.closed{
+  width: 60px; height: 70px;
+  right: 2px; left: auto; top: 60%; cursor: pointer;
+  border-radius: 5px; 
+  box-shadow:inset 2px 2px 10px rgba(109,28,29,0.9),2px 2px 20px rgba(109,28,29,0.9);
+  background:  url(../images/next.png) no-repeat center;
+  background-size: 100% 100%;
+  animation:boxShakeTop 4s 1s infinite;
+}
+#goNextTrip.closed .main{
+  display: none;
+}
+
+#ActiveRule .main .close{top: 40px;right: 0px; }
+#ActiveRule .main{padding: 60px 20px;}
+#ActiveRule .main .cont{
+  width: 100%; height: 100%; font-size: 1.2em; line-height: 1.5em;
+  padding: 20px 30px; border-radius: 20px;
+  background: rgba(255,255,255,0.85);
+}
+#ActiveRule .main .cont h5{font-size: 1.4em; line-height: 2.2em;}
+#ActiveRule .main .cont p{margin: 5px 0;}
+
+
+.prizesExchange{
+  width: 90%;
+  margin: 40px auto 20px auto;
+  padding: 10px 1.5% 10px 3.5%;
+  position: relative;
+  background: url(../images/prize_bg.png) no-repeat center;
+  background-size:100%;
+}
+.prizesExchange .bg{
+  width: 100%; height:15%;
+  position: absolute; left: 0%; top: 1%;
+  background: url(../images/prize_bg.png) no-repeat top center;
+  background-size:100%;
+  z-index: 66;
+}
+.prizesExchange .prize{
+  position: relative;
+  width: 8%;
+  margin: 0 0.5%;
+  padding-top: 3.5%;
+  float: left;
+  transition: all 0.5s;  
+}
+.prizesExchange .prize .tips{
+  display: none;
+  width: 400%;
+  position: absolute;
+  left: 0;
+  top: -41%;
+}
+.prizesExchange .prize .tips img{
+  width: 100%;
+}
+.prizesExchange .prize:nth-child(10) .tips{
+  left: -100%;
+}
+.prizesExchange .prize:nth-child(11) .tips{
+  left: -200%;
+}
+.prizesExchange .prize:nth-child(12) .tips{
+  left: -300%;
+}
+.prizesExchange .prize:hover .tips{
+  display: block; 
+}
+.prizesExchange .prize .pic{width: 100%;}
+.prizesExchange .prize .pic img{width: 100%;}
+.prizesExchange .prize .pic img.on{display: none;}
+.prizesExchange .prize.cur{cursor: pointer;}
+.prizesExchange .prize.cur:hover{animation:boxShake 2s infinite;}
+.prizesExchange .prize.cur .pic img{display: none;}
+.prizesExchange .prize.cur .pic img.on{display: block;}
+#ReceivePrize .main .title{
+  left: -25%;top: -800px;
+  width: 480px;
+  margin: 20px 0 0 -225px;
+  z-index: 222;
+  transition: all 1s 0.8s;
+  animation: none;
+}
+#ReceivePrize .main .cont{
+  position: relative;
+  z-index: 333;
+  left: -25%;top: -800px;
+  margin: 25% 15% 20px 15%;
+  padding: 5%;
+  width: 70%;
+  height: 50%;
+  line-height: 40px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.85);
+}
+#ReceivePrize .cont h5{
+  line-height: 40px;
+  font-size: 22px;
+  color: #6d1c1d;
+}
+#ReceivePrize .cont p{
+  line-height: 20px;
+  margin-top: -10px;
+  font-size: 14px;
+  color: red;
+}
+#ReceivePrize .cont table{
+  width: 100%;
+}
+#ReceivePrize .cont th{
+  text-align: left;
+  width: 80px;
+  font-size: 16px;
+  line-height: 30px;
+}
+#ReceivePrize .cont input{
+  width: 100%;
+  padding: 0 10px;
+  line-height: 30px;
+  height: 30px;
+}
+#ReceivePrize .cont textarea{
+  width: 100%;
+  padding:5px 10px;
+  line-height: 25px;
+  height: 70px;
+  margin: 5px 0;
+}
+#ReceivePrize .main.on .title{
+  left: 50%;top: 0px;
+  
+}
+#ReceivePrize .main.on .cont{
+  animation: flyMan 2s forwards;
+}
+
+
+/*页脚活动说明样式*/
+.footer{width: 90%;
+  margin: 0px auto;
+  padding: 0px 0 30px 0;
+  line-height: 2em;
+  font-size: 1.4em;
+  color: #2d1402;
+}
+.footer p{line-height: 1.5em; margin: 10px 0;}
+.footer dt{width: 48%;}
+.footer dd{width: 50%;}
+.footer dt img{margin-top: 10px;animation:boxTips 5s infinite;}
+.footer h5{font-size: 1.6em; line-height: 2.4em;}
+
+.messageTips{
+  display: none;
+  z-index: 99999;
+  position: fixed;
+  top: 2px;
+  left: 50%;
+  width: 400px;
+  padding: 10px;
+  line-height: 30px;
+  margin-left: -200px;
+  text-align: center;
+  background: #fabb58;
+  font-size: 1.2em;
+  border:1px solid #6d1c1d;
+  color: #b51b1f;
+  font-weight: 700;
+  box-shadow: 2px 2px 10px 4px rgba(109,28,29,0.5),inset 2px 2px 20px rgba(109,28,29,0.5);
+}
+
+/*动画关键帧设置*/
+@keyframes flyMan{
+  0%   {left: -25%;top: -500px;}
+  100% {left: 10px;top: 0;}
+}
+@keyframes headTitle{
+  0%   {transform: scale(1); opacity: 0;}
+  50%  {transform: scale(1.2); opacity: 1;}
+  100% {transform: scale(1); opacity: 1;}
+}
+@keyframes headTime{
+  0%   {transform: scale(1.5) rotateY(180deg); opacity: 0;}
+  50% {transform: scale(1) rotateY(0deg); opacity: 1;}
+  75% {transform: scale(1.2); opacity: 1;}
+  100% {transform: scale(1); opacity: 1;}
+}
+@keyframes boxShake{
+  0%   {left: -2px;}
+  5%  {left: 2px;}
+  10%  {left: -2px;}
+  15%  {left: 2px;}
+  20%  {left: -2px;}
+  25% {left: 0px;}
+  100% {left: 0px;}
+}
+@keyframes boxShakeTop{
+  0%   {margin-top: -2px;}
+  5%  {margin-top: 2px;}
+  10%  {margin-top: -2px;}
+  15%  {margin-top: 2px;}
+  20%  {margin-top: -2px;}
+  25% {margin-top: 0px;}
+  100% {margin-top: 0px;}
+}
+
+@keyframes lightTwinkle{
+  0%{transform:scale(1.2); opacity: 1;}
+  25%{transform:scale(1); opacity: 0.8;}
+  50%{transform:scale(1.2); opacity: 1;}
+  75%{transform:scale(1); opacity: 0.8;}
+  100%{transform:scale(1.2); opacity: 1;}
+}
+@keyframes digLightTwinkle{
+  0%{transform:scale(1.1); opacity: 1;}
+  25%{transform:scale(1); opacity: 0.8;}
+  50%{transform:scale(1.1); opacity: 1;}
+  75%{transform:scale(1); opacity: 0.8;}
+  100%{transform:scale(1.1); opacity: 1;}
+}
+@keyframes lightRotate{
+  0%   {transform:rotate(0deg);}
+  100%  {transform:rotate(360deg);}
+}
+@keyframes boxTips{
+  0%   {transform:rotateY(0deg);}
+  80%  {transform:rotateY(0deg);}
+  100%  {transform:rotateY(360deg);}
+}

@@ -1,0 +1,147 @@
+
+
+*{margin: 0;padding: 0;-webkit-box-sizing: border-box; box-sizing: border-box;}
+ol,ul,li{list-style: none;}
+img,i{vertical-align:middle; border:0;}
+a{text-decoration:none; color:#000;}
+input{outline: none; font-family:"Microsoft YaHei";vertical-align:middle;}
+body{font-family:"Microsoft YaHei"; background: url(../images/bg.png) repeat center; font-size: 0.16rem;}
+
+
+.clear{zoom:1;}
+.clear:after{content:""; display:block; width:auto; height:0; clear:both;}
+
+.left{float:left;}
+.right{float:right;}
+
+/*logo图片部分样式*/
+.logo{position: absolute; left: 0.1rem; top: 0.1rem;}
+.logo img{width: 2rem; margin: 0rem; float: right;}
+
+/*活动锦囊部分--按钮样式*/
+.silkBag .icon{position: absolute; right: 0.1rem; top: 0.1rem;transform: scale(1);animation: sizeChange 2s linear infinite;}
+.silkBag .icon img{width: 0.8rem;}
+/*活动锦囊部分--活动规则/我的奖品弹窗样式*/
+.silkBag .content{position: fixed; display: none; top: 0; left: 0; width: 7.5rem; height: 100%; font-size: 0.16rem; padding: 0.1rem;color: #fff; background: rgba(0,0,0,0.9);z-index: 139;}
+.silkBag .close{position: absolute; right: 0.3rem; top: 0.3rem; z-index:159;}
+.silkBag .close img{width: 0.4rem;}
+.silkBag .content .main{height: 20rem; width: 7.3rem; overflow-y:scroll; height: 100%; position: absolute;}
+.silkBag .content .tab{border-bottom: 0.02rem solid #fff; line-height: 0.5rem; padding-top: 0.2rem; padding-bottom: 0.1rem;}
+.silkBag .content .tab strong{width: 3.5rem; display: inline-block; text-align: center; font-size: 0.3rem; position: relative;}
+.silkBag .content .tab strong.on::after{content: ''; display: block; position: absolute; left: 1rem; bottom: -0.15rem; width: 1.5rem; height: 0.05rem; background: #fff;}
+.silkBag .content .rules h5{background: #fff; width: 2rem; margin: 0.15rem 0.1rem; line-height: 0.5rem; color: #333; text-align: center;}
+.silkBag .content .rules p{margin-left: 0.3rem; line-height: 0.4rem;}
+.silkBag .content .prize{display: none;}
+.silkBag .content .prize li{margin: 0.2rem; border: 0.02rem solid #eee; padding: 0.2rem; position: relative; border-radius: 0.1rem; line-height: 0.45rem;}
+.silkBag .content .prize li h5{font-size: 0.18rem;}
+.silkBag .content .prize li p{font-size: 0.16rem;}
+.silkBag .content .prize li i{color: #f80;}
+.silkBag .content .prize li a{position: absolute; right: 0.2rem; top: 50%; margin-top: -0.4rem;}
+.silkBag .content .prize li a img{height: 0.8rem;}
+.prizeDetail{position: fixed; top: 0; left: 0; display: none; width: 7.5rem; height: 100%; font-size: 0.16rem;color: #333; background: #eee;z-index: 299;}
+.prizeDetail .info{text-align: center; padding: 0.4rem 0 0.2rem;background:url(../images/bg1.png) repeat-x center; background-size: auto 100%; }
+.prizeDetail .info .prize{width: 1.5rem; height: 1.5rem; border: 1px solid #ccc; border-radius: 0.2rem;}
+.prizeDetail .info h2{font-size: 0.5rem; font-weight: 400; margin: 0.1rem; color: #fff;}
+.prizeDetail .info p{font-size: 0.2rem; color: #fff;}
+.prizeDetail .btn{background: #fff; padding: 0.4rem; text-align: center;}
+.prizeDetail .btn span{display: inline-block; padding: 0.1rem 0.3rem; background: #ddd; color: #666;}
+.prizeDetail .btn span.exchange{background: #f60; color: #fff; font-size: 0.2rem;}
+.prizeDetail .detail{background: #fff; margin-top: 0.3rem; padding: 0.2rem;}
+.prizeDetail .detail h5{font-size: 0.3rem; padding-bottom: 0.1rem; border-bottom: 1px solid #aaa; margin-bottom: 0.1rem;}
+.prizeDetail .detail p{font-size: 0.2rem; line-height: 0.5rem;}
+.prizeDetail .detail p strong{display: inline-block; font-weight: 400; width: 1.5rem; color: #888; }
+
+/*活动标题/简略说明/中奖信息滚动视图部分样式*/
+.page_title{position: relative;width: 6rem; margin: 0.25rem 0.75rem 0.7rem;}
+.page_title .top img{width: 100%;animation:headTitle 2s forwards;}
+.page_title .tips{width: 3rem; height: 0.65rem; padding: 0.1rem 0.2rem; animation:headTime 2s 1s forwards; text-align: center; line-height: 0.45rem;font-size: 0.12rem; color: #eee; position: absolute; bottom: -0.15rem; right:0rem; background: url(../images/border.png) no-repeat center; background-size:100% 100%;}
+.prizeInfo{position: absolute; bottom: -0.6rem; left: -0.65rem; width: 2.2rem;height: 1.2rem; overflow: hidden;}
+.prizeInfo li{font-size: 0.12rem; position: absolute; left: 0; bottom: -1.2rem; max-height: 1.2rem; background: rgba(255,255,255,0.4); padding: 0.05rem 0.13rem; width: 2.2rem; overflow: hidden; border-radius: 0.4rem; border: 1px solid #f68; color: #d25; box-shadow:inset 0.01rem 0.01rem 0.1rem rgba(0,0,0,0.5);}
+.prizeInfo li.on{bottom: 0;}
+
+
+/*抽奖框部分样式*/
+.luckDraw{width: 6.6rem; height: 6.6rem; background: #e68; border-radius: 0.1rem; margin:0.1rem 0.45rem; padding: 0.3rem; font-size: 0.2rem; position: relative; z-index: 10; box-shadow:0.05rem 0.05rem 0.1rem rgba(0,0,0,0.5);}
+.luckDraw .cont{height: 100%; width: 100%; border-radius: 0.1rem;background: url(../images/cont_bg.png) no-repeat center; background-size: cover;  border: 1px solid #eee; box-shadow:inset 0 0 0.2rem rgba(0,0,0,0.5), 0 0 0.05rem rgba(0,0,0,0.5); position: relative;}
+.luckDraw .cont .box{width: 1.7rem;height: 1.7rem; background: #fff; border-radius: 0.1rem; position: absolute; z-index: 99;}
+.luckDraw .cont .box.on{box-shadow: inset 0 0 1.5rem #ff0,0 0 0.1rem rgba(0,0,0,0.5); border: 2px solid #ff0; transform:scale(1.15);}
+.luckDraw .cont .box img{width: 100%; height: 100%;}
+.luckDraw .cont .box1{left: 0.25rem; top: 0.25rem;}
+.luckDraw .cont .box2{left: 2.15rem; top: 0.25rem;}
+.luckDraw .cont .box3{left: 4.05rem; top: 0.25rem;}
+.luckDraw .cont .box8{left: 0.25rem; top: 2.15rem;}
+.luckDraw .cont .box4{left: 4.05rem; top: 2.15rem;}
+.luckDraw .cont .box7{left: 0.25rem; top: 4.05rem;}
+.luckDraw .cont .box6{left: 2.15rem; top: 4.05rem;}
+.luckDraw .cont .box5{left: 4.05rem; top: 4.05rem;}
+.luckDraw .twinkle>div{position: absolute; z-index: 99;}
+.luckDraw .twinkle i{display: inline-block; width: 0.18rem; height: 0.18rem; margin: 0.12rem; float: left; border-radius: 50%; background: #fff; box-shadow: 0 0 0.02rem rgba(255,255,255,0.5);}
+.luckDraw .twinkle i:nth-child(odd){background: #ff0;}
+.luckDraw .twinkle .left i{background: #ff0;}
+.luckDraw .twinkle .left i:nth-child(odd){background: #fff;}
+.luckDraw .twinkle.cur i{animation: twinkle 0.6s linear infinite; box-shadow: 0rem 0rem 0.2rem #fff;}
+.luckDraw .twinkle.cur i:nth-child(odd){animation: twinkle1 0.6s linear infinite;}
+.luckDraw .twinkle.cur .left i{animation: twinkle1 0.6s linear infinite;}
+.luckDraw .twinkle.cur .left i:nth-child(odd){animation: twinkle 0.6s linear infinite;}
+.luckDraw .twinkle .left{width: 0.45rem; height: 7rem; top: 0.15rem; left: -0.07rem;}
+.luckDraw .twinkle .right{width: 0.45rem; height: 7rem; top: 0.15rem;right:-0.09rem;}
+.luckDraw .twinkle .top{width: 6.8rem; height: 0.3rem; top: -0.06rem; left: 0.35rem;}
+.luckDraw .twinkle .bottom{width: 6.8rem; height: 0.3rem; bottom:0.08rem; left: 0.35rem;}
+.luckDraw .mask{width: 7.5rem; display: none; min-height: 9rem; position: fixed; left: 0; top: 0; z-index: 100;}
+.luckDraw .btn{position:absolute; left: 2.4rem; top: 2.4rem; z-index: 90;}
+.luckDraw .btn div{background: #f8a;width: 1.8rem;height: 1.8rem; border: 3px solid #fad; border-radius: 0.1rem; padding: 0.15rem;}
+.luckDraw .btn div img{width: 100%;}
+
+/*抽奖成功后弹窗样式*/
+.prizeDia{position: fixed; top: 0; left: 0; display: none; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 999;}
+.prizeDia .cont{width: 7.5rem; height: 8.8rem; padding: 1rem 1.5rem; position: absolute; top: 50%; margin-top: -4.4rem; background: url(../images/dia_bg.png) no-repeat center; background-size: 120% 120%;}
+.prizeDia .cont .close{position: absolute; right: 1.1rem; top: 0.8rem; z-index:159;}
+.prizeDia .cont .close img{width: 0.4rem;}
+.prizeDia .box{width: 4.5rem; height: 5.5rem; padding: 2.3rem 0.7rem 0.2rem; text-align: center; background: url(../images/dia_border.png) no-repeat center; background-size: 100% 100%;}
+.prizeDia .box img{width: 2rem; height: 2rem; border: 2px solid #ccc; border-radius: 0.2rem;}
+.prizeDia .box h5{margin: 0.1rem 0; color: #f60; font-size: 0.28rem;}
+.prizeDia .box p{color: #333;}
+.prizeDia .cont .btn{background: #fff; text-align: center; line-height: 0.5rem; font-weight: 700; width: 1.5rem; height: 0.5rem; margin: 0.15rem auto; background:url(../images/btn.png) no-repeat center; background-size:100% 100%;}
+
+/*页脚可抽奖次数/参与人数/版权信息样式*/
+.footer{ padding-bottom: 0.3rem; position: relative;}
+.footer .icon{position: absolute; right: 0.1rem; top: -0.2rem; display: none; z-index: 120; width: 1rem; height: 1rem; border-radius: 50%; border: 2px solid #fff; text-align: center; transform: scale(1);animation: sizeChange 2s linear infinite;}
+.footer .icon::after{content: '';display: block; width: 0.2rem; height: 0.2rem; background: #f00; border-radius: 50%; position: absolute; top: 0rem; right: 0rem;}
+.footer .icon img{width: 0.6rem; height: 0.6rem; margin-top: 0.2rem;}
+.luckDrawNum span{display: block; margin: 0.1rem auto; height: 0.45rem; line-height: 0.45rem; width: 2.5rem; text-align: center; background:url(../images/btn2.png) no-repeat center; background-size:100% 100%;}
+.footer .peopleNum{ font-size: 0.16rem; color: #ff0;width: 7rem;margin: 0 0.25rem; text-align: center;}
+.footer .copyright{position: fixed; left: 0; bottom: 0; line-height: 0.25rem; height: 0.25rem; background: rgba(0,0,0,0.5); z-index: 9; text-align: center; width: 100%; font-size: 0.12rem; color: #fff;}
+.footer .rules p{line-height: 0.25rem; font-size: 0.14rem; color: #ccc; margin: 0rem 0.075rem;}
+.footer .prize li{float: left; width: 1.6rem; margin: 0 0.075rem; background: rgba(0,0,0,0.3); padding: 0.1rem; border-radius: 0.1rem;}
+.footer .prize li img{width: 1.4rem; height: 1.4rem; border: 0.01rem solid #888;}
+.footer .prize li h5{line-height: 0.35rem; text-align: center; font-size: 0.18rem; color: #ff0;}
+.footer .prize li p{text-align: center; line-height: 0.25rem; font-size: 0.14rem; color: #ccc;}
+
+@keyframes headTitle{
+  0%   {transform: scale(1); opacity: 0;}
+  50%  {transform: scale(1.2); opacity: 1;}
+  100% {transform: scale(1); opacity: 1;}
+}
+@keyframes headTime{
+  0%   {transform: scale(1.5) rotateY(180deg); opacity: 0;}
+  50% {transform: scale(1) rotateY(0deg); opacity: 1;}
+  75% {transform: scale(1.2); opacity: 1;}
+  100% {transform: scale(1); opacity: 1;}
+}
+@keyframes twinkle{
+  49.9%{background: #fff;}
+  50%{background: #ff0;}
+  99.9%{background: #ff0;}
+  100%{background: #fff;}
+}
+@keyframes twinkle1{
+  49.9%{background: #ff0;}
+  50%{background: #fff;}
+  99.9%{background: #fff;}
+  100%{background: #ff0;}
+}
+@keyframes sizeChange{
+  0%{transform: scale(1);}
+  50%{transform: scale(1.1)}
+  100%{transform: scale(1)}
+}

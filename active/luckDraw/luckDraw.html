@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equi="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Document</title>
+  <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="js/luckDraw.js"></script>
+  <link rel="stylesheet" href="css/luckDraw.css">
+</head>
+<body>
+  <!-- 头部logo及活动锦囊 -->
+  <div class="header">
+    <!-- logo -->
+    <div class="logo">
+      <img src="images/logo.png" alt="">
+    </div>
+    <!-- 锦囊 -->
+    <div class="silkBag">
+      <div class="icon"><img src="images/rules.png" alt=""></div>
+      <!-- 锦囊弹窗 -->
+      <div class="content">
+        <div class="close"><img src="images/close.png" alt=""></div>
+        <div class="main">
+          <div class="tab">
+            <strong class="rules on">活动说明</strong><span>|</span><strong class="prize">我的奖品</strong>
+          </div>
+          <div class="rules">
+            <h5>活动奖品</h5>
+            <p>一等奖：价值100元产品</p>
+            <p>一等奖：价值100元产品</p>
+            <p>一等奖：价值100元产品</p>
+            <h5>活动时间</h5>
+            <p>2019年1月30日 12：00 - 2019年2月30日 12：00</p>
+            <h5>主办单位</h5>
+            <p>北京伊诺凯科技有限公司</p>
+            <h5>技术支持</h5>
+            <p>北京伊诺凯科技有限公司</p>
+          </div>
+          <div class="prize">
+            <ul id="prizeList">
+              <li>
+                <h5>安慰奖：价值5元小礼品</h5>
+                <p>兑奖期限：2019.1.30至2019.2.30</p>
+                <i>已过期</i>
+                <a class="more" data-id='1' href="javascript:;"><img src="images/jian_l.png" alt=""></a>
+              </li>
+              <li>
+                <h5>安慰奖：价值5元小礼品</h5>
+                <p>兑奖期限：2019.1.30至2019.2.30</p>
+                <i>已过期</i>
+                <a class="more" data-id='2' href="javascript:;"><img src="images/jian_l.png" alt=""></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="prizeDetail">
+        <div class="close"><img src="images/close.png" alt=""></div>
+        <div class="info">
+          <img class="prize" src="" alt="">
+          <h2 class="title"></h2>
+          <p>兑奖期限：<span class="term"></span></p>
+          <img class="line" src="" alt="">
+        </div>
+        <div class="btn"></div>
+        <div class="detail">
+          <h5>兑奖券详情</h5>
+          <p><strong>有效日期</strong><span class="term"></span></p>
+          <p><strong>可用时段</strong><span class="time"></span></p>
+          <p><strong>兑奖地址</strong><span class="add"></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 活动标题及简略说明 -->
+  <div class="page_title">
+    <div class="top"><img src="images/title.png" alt=""></div>
+    <div class="tips">每天登录即可抽奖 * 次</div>
+    <div class="prizeInfo">
+      <ul>
+        <li class="on"><span>***抽中88.88元现金红包抽中88.88元</span</li>
+        <li><span>***抽中88.88元现金红包</span</li>
+          <li><span>***抽中88.88元现金红包</span</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 抽奖框 -->
+  <div class="luckDraw">
+    <!-- 防止多次点击遮罩 -->
+    <div class="mask"></div>
+    <!-- 抽奖边框闪烁圆点 -->
+    <div class="twinkle">
+      <div class="left">
+        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      </div>
+      <div class="right"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="top"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="bottom"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+    <!-- 抽奖奖品内容 -->
+    <div class="cont">
+      <div class="box box1" data-grade='一等奖'><img src="images/title1.png" alt="88.88元现金红包"></div>
+      <div class="box box2" data-grade='二等奖'><img src="images/title1.png" alt="77.88元现金红包"></div>
+      <div class="box box3" data-grade='三等奖'><img src="images/title1.png" alt="66.88元现金红包"></div>
+      <div class="box box4" data-grade='四等奖'><img src="images/title1.png" alt="55.88元现金红包"></div>
+      <div class="box box5" data-grade='五等奖'><img src="images/title1.png" alt="44.88元现金红包"></div>
+      <div class="box box6" data-grade='六等奖'><img src="images/title1.png" alt="33.88元现金红包"></div>
+      <div class="box box7" data-grade='七等奖'><img src="images/title1.png" alt="22.88元现金红包"></div>
+      <div class="box box8" data-grade='八等奖'><img src="images/title1.png" alt="11.88元现金红包"></div>
+    </div>
+    <!-- 开始抽奖按钮 -->
+    <div class="btn">
+      <div><img src="images/begin1.png" alt=""></div>
+    </div>
+  </div>
+
+  <!-- 抽奖完成奖品弹窗 -->
+  <div class="prizeDia">
+    <div class="cont">
+      <div class="close"><img src="images/close.png" alt=""></div>
+      <div class="box">
+        <img src="" alt="">
+        <h5></h5>
+        <p></p>
+      </div>
+      <div class="btn">查看奖品</div>
+    </div>
+  </div>
+
+  <!-- 页脚参与人数/版权信息 -->
+  <div class="footer">
+     <div class="icon"><img src="images/prize_icon.png" alt=""></div>
+    <div class="luckDrawNum">
+      <span><strong>还有 <b id="luckDrawNum"> 3 </b> 次</strong> 抽奖机会</span>
+    </div>
+    <div class="peopleNum">
+      <p>已有8524人参与</p>
+    </div>
+    <div class="copyright">
+      北京伊诺凯科技有限公司 版权所有
+    </div>
+  </div>
+</body>
+</html>

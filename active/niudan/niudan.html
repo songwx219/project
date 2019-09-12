@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>扭蛋机</title>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script src="js/niudan.js"></script>
+  <link rel="stylesheet" href="css/niudan.css">
+</head>
+<body>
+
+<div class="title"><img src="images/title.png" alt=""></div>
+
+<!-- =============== 主内容区begin =============== -->
+<div class="container clear">
+    <!-- =============== 活动规则区--左 =============== -->
+    <div class="rule">
+      <div class="seeMyPrize"><a href="#"><img src="images/niudan2.png" alt=""></a></div>
+      <div class="activityRules">
+        <h5><img src="images/niudan3.png" alt=""></h5>
+        <p>2019年5月8日-6月8日</p>
+        <h5><img src="images/niudan4.png" alt=""></h5>
+        <p>1.凡是通过伊诺凯网站购买产品，单笔订单满200元，即可获得一次扭蛋的机会</p>
+        <p>2.消耗500积分，即可换取一次扭蛋的机会</p>
+      </div>
+      <div class="winnerList">
+        <h5><img src="images/niudan5.png" alt=""></h5>
+        <div class="listCont">
+          <div class="list">
+            <p>恭喜151****0245获得荣耀V20手机<span>5月6日</span></p>
+            <p>恭喜152****0245获得荣耀V20手机<span>5月6日</span></p>
+            <p>恭喜153****0245获得荣耀V20手机<span>5月6日</span></p>
+            <p>恭喜154****0245获得荣耀V20手机<span>5月6日</span></p>
+            <p>恭喜155****0245获得荣耀V20手机<span>5月6日</span></p>
+            <p>恭喜156****0245获得荣耀V20手机<span>5月6日</span></p>
+            <p>恭喜157****0245获得荣耀V20手机<span>5月6日</span></p>
+            <p>恭喜158****0245获得荣耀V20手机<span>5月6日</span></p>
+            <p>恭喜159****0245获得荣耀V20手机<span>5月6日</span></p>
+            <p>恭喜150****0245获得荣耀V20手机<span>5月6日</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- =============== 扭蛋游戏区--中 =============== -->
+    <div class="eggGameCont">
+      <div class="eggBox">
+        <div class="egg"></div>
+        <div class="egg"></div>
+        <div class="egg"></div>
+        <div class="egg"></div>
+        <div class="egg"></div>
+        <div class="egg"></div>
+        <div class="egg"></div>
+        <div class="egg"></div>
+        <div class="egg"></div>
+        <div class="egg"></div>
+        <div class="eggPrize"></div>
+        <div class="boli"><img src="images/niudan1.png" alt=""></div>
+      </div>
+      <div class="eggBtn">
+        <div class="twinkleLight"><img src="images/niudan.gif" alt=""></div>
+        <div class="btn begin"></div><!-- 此处需判断，若无可用次数时，添加“disable”类 -->
+      </div>
+      <div class="availableNum">
+        可用扭蛋次数：<strong class="num">2</strong>
+        <span class="getNum" title="点击获取扭蛋次数"><img src="images/niudan11.png" alt=""></span>
+        <div class="tips">点击此处可用积分兑换次数哦！<img class="close" src="images/tipbtn.png" alt="关闭" title="关闭"></div>
+        <script>$('.availableNum .close').on('click',function(){ $('.availableNum .tips').hide() }) </script>
+      </div>
+    </div>
+    <!-- =============== 可获得奖品列表区--右 =============== -->
+    <div class="prizeList">
+      <h5><img src="images/niudan6.png" alt=""></h5>
+      <ul>
+        <li><div class="pic"><img src="images/p1.png" alt=""></div><p>荣耀V20手机</p></li>
+        <li><div class="pic"><img src="images/p2.png" alt=""></div><p>小型冰箱</p></li>
+        <li><div class="pic"><img src="images/p3.png" alt=""></div><p>冰镇神器</p></li>
+        <li><div class="pic"><img src="images/p4.png" alt=""></div><p>凉席三件套</p></li>
+        <li><div class="pic"><img src="images/p5.png" alt=""></div><p>DQ代金券100元</p></li>
+        <li><div class="pic"><img src="images/p6.png" alt=""></div><p>安耐晒防晒霜</p></li>
+        <li><div class="pic"><img src="images/p7.png" alt=""></div><p>高档雨伞</p></li>
+        <li><div class="pic"><img src="images/p8.png" alt=""></div><p>迷你电扇</p></li>
+        <li><div class="pic"><img src="images/p9.png" alt=""></div><p>现金红包</p></li>
+      </ul>
+    </div> 
+</div>
+
+<!-- =============== 抽奖成功后弹窗样式begin =============== -->
+<div class="dialog prizeDia">
+  <div class="cont">
+    <div class="light"></div>
+    <div class="closeBtn"><img class="close" src="images/close.png" alt=""></div>
+    <div class="eggImg"></div>
+    <div class="box">
+      <h5>恭喜获得<small class="prizeName"></small></h5>
+      <p class="pic"><img class="prizeImg" src="" alt=""></p>
+      <p>- 奖品以放入***，可至个人中心查看 -</p>
+      <div class="awardInfor">
+        <table cellspacing="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <th width="90px"><span class="red">*</span>收货人姓名</th>
+              <td width="250px"><input type="text" class="userName" placeholder="请输入收货人姓名"></td>
+            </tr>
+            <tr>
+              <th><span class="red">*</span>手机号</th>
+              <td><input type="text" class="userTel" placeholder="请输入手机号"></td>
+            </tr>
+            <tr>
+              <th><span class="red">*</span>收货地址</th>
+              <td><input type="text" class="userAdd" placeholder="请输入收货地址"></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="tips"><span class="red">*</span>请确保您所填的信息真实有效，若因信息有误造成的一切后果将由您个人承担！</p>
+        <div class="btn second"><span class="succ">提交</span><span class="close">取消</span></div>
+      </div>
+      <div class="btn frist"><span class="succ">立即领取</span><span class="close">我知道了</span></div>
+    </div>
+  </div>
+</div>
+<div class="dialog getMoreNumDia">
+  <div class="cont">
+    <div class="closeBtn"><img class="close" src="images/close.png" alt=""></div>
+    <div class="box">
+      <h5>获取更多扭蛋次数</h5>
+      <ul>
+        <li>凡是通过伊诺凯网站购买产品，单笔订单满200元，即可获得一次扭蛋的机会；</li>
+        <li>
+          <p>或者消耗500积分，即可换取一次扭蛋的机会；</p>
+          <p class="tips">您当前可用积分：<strong class="totleScore">888</strong>积分</p>
+          <p>请输入兑换次数：<input type="text" value="1" class="exchangeNum"></p>
+        </li>
+      </ul>
+      <div class="btn frist">
+        <span class="succ">立即积分兑换</span>
+        <a href="#"><span class="goto">立即购物</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
