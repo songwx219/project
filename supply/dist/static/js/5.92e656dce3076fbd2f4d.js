@@ -1,2 +1,0 @@
-webpackJsonp([5],{"8rUp":function(e,t){},md3T:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r={render:function(){var e=this.$createElement;return(this._self._c||e)("router-view")},staticRenderFns:[]};var a=n("VU/8")({name:"User",data:function(){return{}}},r,!1,function(e){n("8rUp")},"data-v-b2abd0b0",null);t.default=a.exports}});
-//# sourceMappingURL=5.92e656dce3076fbd2f4d.js.map
