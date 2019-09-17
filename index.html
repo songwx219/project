@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container-fluid section one">
-        <video src="bigdata/images/bg.mp4" autoplay  loop></video>
+        <video class="video" src="" autoplay  loop></video>
         <div class="container">
             <div class="main">
                 <h2 class="text-warning">欢迎来到SONGWX的作品展示页面</h2>
@@ -182,8 +182,6 @@
                         </div>
                     </div>
                 </div>
-                
-                
             </div>
             
         <!-- </div> -->
@@ -250,6 +248,7 @@
             <li title="休闲游戏">休闲游戏</li>
         </ul>
     </div>
+</body>
 <script src="bigdata/js/jquery.min.js"></script>
 <script src="bigdata/js/popper.min.js"></script>
 <script src="bigdata/js/bootstrap.min.js"></script>
@@ -264,6 +263,7 @@ $(function(){
     })
     
     $('.section.one').addClass('this');
+    $('.video').attr('src','bigdata/images/bg.mp4')
     
     $('.aside.menu li').on('click',function(){
         var index=$(this).index();
@@ -325,30 +325,5 @@ $(function(){
                 }
             }
         }
-        /*function rightRoll(e){
-            var lastHtml=$(".roll3D").find("li:eq(0)").html();
-            for(var i=0;i<liLength;i++){
-                if(i<liLength-1){
-                    var z=i+1;
-                    var nextHtml=$(".roll3D").find("li:eq("+z+")").html();
-                    $(".roll3D").find("li:eq("+i+")").html(nextHtml);
-                }else{
-                    $(".roll3D").find("li:eq("+i+")").html(lastHtml);
-                }
-            }
-        }
-        function leftRoll(e){
-            var lastHtml=$(".roll3D").find("li:eq(7)").html();
-            for(var i=liLength-1;i>=0;i--){
-                if(i>0){
-                    var z=i-1;
-                    var nextHtml=$(".roll3D").find("li:eq("+z+")").html();
-                    $(".roll3D").find("li:eq("+i+")").html(nextHtml);
-                }else{	
-                    $(".roll3D").find("li:eq("+i+")").html(lastHtml);
-                }
-            }
-        }*/
-        </script>
-</body>
+</script>
 </html>
