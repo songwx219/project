@@ -76,7 +76,7 @@ p{margin-bottom: 10px;}
 .section.four .box img{width: 100%;}
 .section.four .box h5{line-height: 2em; font-size: 1rem; margin: 0;}
 .section.four .box p{font-size: 0.8rem; line-height: 1.4rem; color: #aaa;}
-.section.four .box .content{background: #000; padding: 5px;}
+.section.four .box .content{background: #000; padding: 5px; height: 140px;}
 .section.four.this .title h3{transform: scale(1); opacity: 1;}
 .section.four.this .title p{transform: scale(1); opacity: 1;}
 .section.four.this .box{transform: scale(1); opacity: 1;}
