@@ -4,7 +4,9 @@
         <menu-y v-show='!$store.state.menu.menustate'></menu-y>
         <menu-c v-show='$store.state.menu.menustate'></menu-c>
         <div class="section">
-            <router-view></router-view>
+            <transition name="scale">
+              <router-view></router-view>
+            </transition>
             <footer-y></footer-y>
         </div>
     </div>

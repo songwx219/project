@@ -87,7 +87,7 @@
   </script>
   
   <style scoped>
-  .nav-box{position: fixed; left: 0; top: 50px; bottom: 0; width: 60px; background: #007ed1;}
+  .nav-box{position: fixed; left: 0; top: 50px; bottom: 0; width: 60px; z-index: 9; background: #007ed1;}
   .nav-box .box{ transition: all 0.5s;}
   .nav-box .nav-list{width: 100%; text-align: left; font-size: 14px; border-bottom: 2px solid #016ab1;}
   .nav-box .nav-list>li{padding: 4px 0; width: 100%; transition: all 0.5s; position: relative;} 

@@ -23,11 +23,11 @@ a:hover{text-decoration: none;}
 .header .exit{display: inline-block; width: 30px; height: 30px; background: url('../../../static/images/ad-icon.png') no-repeat 0px -185px; vertical-align: middle;}
 
 
-.section{width: 100%; padding: 50px 20px 0 220px; background: #f5f5f5; transition: all.5s;}
-.section>.main{min-height: 480px; width: 100%; padding-top: 10px;}
-.section>.main .msgbox{width: 100%; padding: 20px; background: #fff;  border-radius: 5px; box-shadow: 0px 0px 5px rgba(0, 0, 0, .3)}
-.section>.main .msgbox>.search{padding-bottom: 20px;}
-.section>.main .msgbox>.search .form{width: 800px;}
+.section{width: 100%; padding: 50px 20px 0px 220px; background: #f5f5f5; transition: all.5s;min-height: 550px; overflow: hidden; position: relative;}
+.section .main{min-height: 480px; width: 100%; padding-top: 10px; z-index: 2;}
+.section .main .msgbox{width: 100%; padding: 20px; background: #fff;  border-radius: 5px; box-shadow: 0px 0px 5px rgba(0, 0, 0, .3)}
+.section .main .msgbox>.search{padding-bottom: 20px;}
+.section .main .msgbox>.search .form{width: 800px;}
 
 .msg-box .content{min-height: 500px; width: 100%; background: #fff; padding: 20px; position: relative; border-radius: 15px; box-shadow: 0px 0px 10px rgba(0, 0, 0, .3)}
 .msg-box>h3{padding: 15px 0; margin-bottom: 0; font-size: 20px; font-weight: 700; color: #666;}
@@ -48,3 +48,11 @@ a:hover{text-decoration: none;}
 .yjs-box.active{position: relative;}
 .yjs-box.active .header .menu-btn i{background-position: 0px -121px;}
 .yjs-box.active .section{padding-left: 80px;}
+
+
+.scale-enter-active { animation: bounce-in .5s;}
+.scale-leave-active{ animation: bounce-in .5s reverse; position: absolute;}
+@keyframes bounce-in {
+    0% { transform: scale(5);opacity: 0;}
+    100% { transform: scale(1);opacity: 1;}
+}

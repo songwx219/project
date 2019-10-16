@@ -1,7 +1,9 @@
 <template>
-  <transition name="el-zoom-in-center">
-    <router-view></router-view>
-  </transition>
+  <div>
+    <transition name="scale">
+        <router-view></router-view>
+    </transition>
+  </div>
 </template>
 
 <script>

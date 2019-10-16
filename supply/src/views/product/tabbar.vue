@@ -2,7 +2,9 @@
   <div class="tabbar">
         <ul class="nav nav-tabs">
             <li class="nav-item" v-for="(item,index) in tabbarData" :key='index' @click='changeMenu(item)'>
+              <transition name="scale">
                 <router-link :class="['nav-link',protype==item.url.split('/')[3].split('?')[0]?'active':'']" :to="item.url">{{item.name}}</router-link>
+              </transition>
             </li>
         </ul>
     </div>
